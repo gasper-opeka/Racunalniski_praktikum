@@ -7,6 +7,8 @@
 \usepackage{url}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{booktabs}
+\newcommand{\m}{\mathcal{M}_2}
 \newtheorem{izrek}{Izrek}
 \newtheorem{definicija}{Definicija}
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
@@ -73,12 +75,14 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic
 \centering
 \caption{Magični kvadrat reda 3}
 \label{table:mag3}
+\large
 \begin{tabular}{|c|c|c|}
 \hline
 8 & 1 & 6 \\ \hline
 3 & 5 & 7 \\ \hline
 4 & 9 & 2 \\ \hline
 \end{tabular}
+\normalsize
 \end{table}
 % Konec magičnega kvadrata
 
@@ -174,7 +178,7 @@ in zato kvadrat ni normalen.
       \label{eq:mc}
       % Okolje `equation` je že prikazni matematični način,
       % zato tu izraz vpišite brez `\[` in `\]`.
-      M_2(n) = \frac{1}{2}n(n^2+1)
+     \m(n) = \frac{1}{2}n(n^2+1)
    \end{equation}
    \end{izrek}
 % Konec okolja izrek
@@ -184,16 +188,16 @@ in zato kvadrat ni normalen.
    V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
    števil (glej \eqref{eq:numbers} na strani \pageref{eq:numbers}) enaka
    \(1 + 2 + \cdots + n^2 = \sum_{k=1}^{n^2} k = \frac{1}{2}n^2(n^2+1)\). Ker imamo
-   v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
-   enaka številu \(M_2(n)\). % sklica: eq:numbers, eq:numbers
+   v kvadratu \(\m(n)\)) vrstic z enako vsoto, je vsota števil v eni vrstici
+   enaka številu \((n)\). % sklica: eq:numbers, eq:numbers
    \end{proof}
 % Konec dokaza
 
 Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
-\(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
+\(\m(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
 \[
-M_2(n;A,D) = \frac{1}{2}n\bigl(2A + D(n^2-1)\bigr).
+\m(n;A,D) = \frac{1}{2}n\bigl(2A + D(n^2-1)\bigr).
 \]
 
  \begin{definicija}
@@ -217,11 +221,14 @@ M_2(n;A,D) = \frac{1}{2}n\bigl(2A + D(n^2-1)\bigr).
 \centering
 \caption{Število različnih normalnih magičnih kvadratov}
 \label{table:stevila}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lcccccc}\toprule
  & \multicolumn{5}{c}{točna vrednost} & približek \\
-red & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+ \midrule
+red & 1 & 2 & 3 & 4 & 5 & 6 \\ 
 število kvadratov & 1 & 0 & 1 & 880 & 275305224 &
 \((1{,}7745 \pm 0{,}0016)\cdot 10^{19}\)
+\\
+\bottomrule
 \end{tabular}
 \end{table}
 % Konec tabele
@@ -239,7 +246,7 @@ sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
 
 \newpage
 
-\bibliographystyle{plain}
+\bibliographystyle{siam}
 \bibliography{magic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
