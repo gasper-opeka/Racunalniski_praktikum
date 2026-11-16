@@ -5,12 +5,14 @@
 \usepackage{lmodern}
 
 \usepackage{url}
-\usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{booktabs}
 \newcommand{\m}{\mathcal{M}_2}
-\newtheorem{izrek}{Izrek}
+\theoremstyle{definition}
 \newtheorem{definicija}{Definicija}
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
 % Nastavimo odmik prve vrstice v odstavku na 0mm.
@@ -188,8 +190,8 @@ in zato kvadrat ni normalen.
    V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
    števil (glej \eqref{eq:numbers} na strani \pageref{eq:numbers}) enaka
    \(1 + 2 + \cdots + n^2 = \sum_{k=1}^{n^2} k = \frac{1}{2}n^2(n^2+1)\). Ker imamo
-   v kvadratu \(\m(n)\)) vrstic z enako vsoto, je vsota števil v eni vrstici
-   enaka številu \((n)\). % sklica: eq:numbers, eq:numbers
+   v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
+   enaka \(\m(n)\). % sklica: eq:numbers, eq:numbers
    \end{proof}
 % Konec dokaza
 
